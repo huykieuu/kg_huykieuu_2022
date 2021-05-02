@@ -11,3 +11,11 @@ let dict = {
     "9": "Nine"
 };
 
+let integers = process.argv.slice(2);
+let n = integers.length;
+for (i = 0; i < n; i++) {
+    [...integers[i]].forEach(c => process.stdout.write(dict[c]));
+    if (i != n-1) {
+        process.stdout.write(", ");
+    }
+}
